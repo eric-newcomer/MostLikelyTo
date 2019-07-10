@@ -1,5 +1,6 @@
 import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
+import { Button } from 'react-native';
 import {
   Image,
   Platform,
@@ -11,6 +12,7 @@ import {
 } from 'react-native';
 
 import { MonoText } from '../components/StyledText';
+import { RectButton } from 'react-native-gesture-handler';
 
 export default function HomeScreen() {
   return (
@@ -35,12 +37,10 @@ export default function HomeScreen() {
 
         </View>
 
-        <View style={styles.helpContainer}>
-          <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
-            <Text style={styles.helpLinkText}>
-              Help, it didn’t automatically reload!
-            </Text>
-          </TouchableOpacity>
+        <View>
+        <Button
+          title="Play Now!"color="#841584" 
+          accessibilityLabel="Learn more about this purple button"/>
         </View>
       </ScrollView>
 
@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
     color: '#2e78b7',
   },
   title: {
-    fontSize: 50,
+    fontSize: 40,
     color: 'blue',
     textAlign: 'center',
     paddingTop: 50,
